@@ -1,4 +1,3 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,15 +9,11 @@
     </head>
     <body>
         <jsp:include page="WEB-INF/paginas/comunes/cabecero.jsp"/>
-        
+
         <jsp:include page="WEB-INF/paginas/comunes/botonesNavegacion.jsp"/>
-        
-        <ul>
-            <c:forEach var="cliente" items="${clientes}">
-                <li>${cliente.idCliente} ${cliente.nombre} ${cliente.apellido} ${cliente.saldo}</li>
-                </c:forEach>
-        </ul>
-        
+
+        <jsp:include page="WEB-INF/paginas/cliente/listadoClientes.jsp"/>
+
         <jsp:include page="WEB-INF/paginas/comunes/piePagina.jsp"/>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
